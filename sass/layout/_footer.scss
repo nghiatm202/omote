@@ -1,0 +1,124 @@
+// -----------------------------------------------------------------------------
+// Footer style
+// -----------------------------------------------------------------------------
+.footer {
+    background-color: $color-primary;
+    position: relative;
+
+    &__container {
+        text-align: center;
+        padding: 28px 0;
+    }
+
+    &__top {
+        color: white;
+        padding-bottom: 24px;
+
+        &-text-desc {
+            font-size: 10px;
+            color: #8e8ea9;
+        }
+
+        &-text-highlight {
+            color: $color-secondary;
+        }
+    }
+
+    &__bottom {
+        color: #8e8ea9;
+
+        &-text {
+            padding: 0 16px;
+            line-height: 0.5;
+        }
+
+        &-text:nth-child(2) {
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+    }
+
+    &__triangle {
+        position: absolute;
+        right: 0;
+        top: 0%;
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 110px solid $color-secondary;
+        border-top: 112px solid transparent;
+        clear: both;
+        cursor: pointer;
+
+        &--small {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid #fff;
+            border-top: 10px solid transparent;
+            clear: both;
+            cursor: pointer;
+        }
+
+
+    }
+
+    .page-top {
+        position: absolute;
+        right: 5px;
+        top: 65%;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .footer {
+        &__container {
+            padding: 13px 0;
+        }
+
+        &__top {
+            padding-bottom: 12px;
+
+            p {
+                font-size: 12px;
+                line-height: calc(46 / 24);
+            }
+        }
+
+        &__top-text-desc {
+            font-size: 9px;
+        }
+
+        &__bottom-text {
+            font-size: 12px;
+            line-height: calc(46 / 24);
+        }
+
+        &__triangle {
+            top: 24%;
+            border-left: 38px solid transparent;
+            border-right: 68px solid #25b1ee;
+            border-top: 63px solid transparent;
+        }
+
+        &__triangle--small {
+            right: 12px;
+            top: 55%;
+            border-left: 8px solid transparent;
+            border-right: 8px solid #fff;
+            border-top: 8px solid transparent;
+        }
+
+        & .page-top {
+            right: 4px;
+            top: 74%;
+            font-size: 7px;
+        }
+    }
+}
